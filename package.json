@@ -1,0 +1,24 @@
+{
+  "name": "aio",
+  "version": "0.0.0",
+  "description": "A Semantic UI based theme for Ghost",
+  "repository": {
+    "type": "git",
+    "url": "https://nimaen@github.com/Nimaen/aio.git"
+  },
+  "author": "bosc.arno@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nimaen/aio/issues"
+  },
+  "homepage": "https://github.com/Nimaen/aio",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-rsync": "^0.5.0",
+    "lodash": "^2.4.1"
+  }
+}
