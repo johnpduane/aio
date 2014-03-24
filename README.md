@@ -1,4 +1,4 @@
 aio
 ===
 
-Semantic UI based theme for Ghost
+Bootstrap UI based theme for Ghost

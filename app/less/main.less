@@ -1,0 +1,32 @@
+@import "bootstrap";
+@import "../../bower_components/fontawesome/less/font-awesome";
+@import "variables";
+@import "mixins";
+
+header {
+	.navbar {
+		margin-bottom : 0;
+		border-bottom : @navbar-border-bottom;
+	}
+}
+
+.blog-logo-img {
+	display : block;
+	margin  : 0 auto @blog-logo-margin-bottom auto;
+	border  : @blog-logo-border;
+	.box-shadow(@blog-logo-box-shadow);
+}
+
+.blog-header {
+	padding          : @blog-header-padding;
+	display          : inline-block;
+	background-color : @blog-header-background;
+	.border-radius(@blog-header-border-radius);
+	.box-shadow(@blog-logo-box-shadow);
+}
+
+.masthead {
+	padding    : @masthead-padding;
+	text-align : center;
+	.box-shadow(@masthead-box-shadow);
+}

@@ -1,0 +1,30 @@
+// App properties
+
+// Common
+@default-header-border-opacity : 0.75;
+@default-header-border-color : rgba(255, 255, 255, @default-header-border-opacity);
+@default-header-border-width : 4px;
+
+// Blog logo
+@blog-logo-border : (2 * @default-header-border-width) solid @navbar-default-bg;
+@blog-logo-box-shadow : 0 @default-header-border-width 0 @default-header-border-color;
+@blog-logo-margin-bottom : 40px;
+
+// Blog Padding
+@blog-header-background: @navbar-default-bg;
+@blog-header-padding : 20px 40px;
+@blog-header-border-radius : 10px;
+
+// Masthead
+@masthead-padding : (@blog-logo-margin-bottom + 20) @blog-logo-margin-bottom;
+@masthead-box-shadow : 0px -@default-header-border-width 0 @default-header-border-color inset;
+
+// Navbar
+@navbar-border-bottom : @default-header-border-width solid rgba(255, 255, 255, @default-header-border-opacity / 2);
+
+// Override Bootstrap properties
+@navbar-default-bg : rgba(255, 255, 255, 0.6);
+@navbar-default-border: none;
+@navbar-border-radius : 0px;
+
+

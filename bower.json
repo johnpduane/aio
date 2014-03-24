@@ -2,7 +2,7 @@
   "name": "aio",
   "version": "0.0.0",
   "homepage": "https://github.com/Nimaen/aio",
-  "description": "A Semantic UI based theme for Ghost",
+  "description": "A Bootstrap UI based theme for Ghost",
   "authors": [
     "bosc.arno@gmail.com"
   ],
@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "semantic-ui": "~0.15.1"
+    "bootstrap": "~3.1.1",
+    "fontawesome": "~4.0.3"
   }
 }
