@@ -48,11 +48,21 @@ module.exports = function (grunt) {
 				"src"   : ["**/*.{png,jpeg,jpg}"],
 				"dest"  : assetsPath + "/images"
 			},
+			"fonts": {
+				"expand": true,
+				"cwd"   : "app/fonts",
+				"src"   : "**/*",
+				"dest"  : assetsPath + "/fonts"
+			},
 			"fontawesome": {
 				"expand": true,
 				"cwd"   : "bower_components/fontawesome/fonts",
 				"src"   : "**/*",
 				"dest"  : assetsPath + "/fonts"
+			},
+			"package": {
+				"src"   : "package.json",
+				"dest"  : buildPath + "/"
 			}
 		},
 		"rsync"    : {

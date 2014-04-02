@@ -1,32 +1,97 @@
 @import "bootstrap";
-@import "../../bower_components/fontawesome/less/font-awesome";
 @import "variables";
 @import "mixins";
 
-header {
-	.navbar {
-		margin-bottom : 0;
-		border-bottom : @navbar-border-bottom;
-	}
+@font-face {
+	font-family : 'Open Sans Light';
+	src         : url('@{fonts-path}/open-sans/OpenSans-Light.eot');
+	src         : url('@{fonts-path}/open-sans/OpenSans-Light.woff') format('woff'), url('@{fonts-path}/open-sans/OpenSans-Light.ttf') format('truetype'), url('@{fonts-path}/open-sans/OpenSans-Light.svg') format('svg');
+	font-weight : 100;
+	font-style  : normal;
 }
 
-.blog-logo-img {
-	display : block;
-	margin  : 0 auto @blog-logo-margin-bottom auto;
-	border  : @blog-logo-border;
-	.box-shadow(@blog-logo-box-shadow);
+@font-face {
+	font-family : 'Open Sans';
+	src         : url('@{fonts-path}/open-sans/OpenSans.eot');
+	src         : url('@{fonts-path}/open-sans/OpenSans.woff') format('woff'), url('@{fonts-path}/open-sans/OpenSans.ttf') format('truetype'), url('@{fonts-path}/open-sans/OpenSans.svg') format('svg');
+	font-weight : normal;
+	font-style  : normal;
+}
+
+@font-face {
+	font-family : 'Open Sans Bold';
+	src         : url('@{fonts-path}/open-sans/OpenSans-Bold.eot');
+	src         : url('@{fonts-path}/open-sans/OpenSans-Bold.woff') format('woff'), url('@{fonts-path}/open-sans/OpenSans-Bold.ttf') format('truetype'), url('@{fonts-path}/open-sans/OpenSans-Bold.svg') format('svg');
+	font-weight : bold;
+	font-style  : normal;
+}
+
+body {
+	font-family     : "Open Sans";
+
+	background      : url('@{images-path}/body-bg.png') no-repeat center center fixed;
+	background-size : cover;
 }
 
 .blog-header {
-	padding          : @blog-header-padding;
-	display          : inline-block;
-	background-color : @blog-header-background;
-	.border-radius(@blog-header-border-radius);
-	.box-shadow(@blog-logo-box-shadow);
+	text-align : center;
+}
+
+.blog-title {
+	font-family : "Open Sans Light";
+}
+
+.blog-description {
+	font-family   : "Open Sans Light";
+	display       : inline-block;
+	border-top    : @blog-description-border;
+	border-bottom : @blog-description-border;
+	padding       : @blog-description-padding;
+}
+
+.blog-navbar {
+	margin-top : @blog-navbar-margin-top;
+	text-align : center;
+
+	.nav {
+		display          : inline-block;
+		background-color : @blog-navbar-bg;
+
+		li {
+			a {
+				color : @blog-navbar-color;
+				.transition(all .3s ease-in-out);
+				.border-radius(0);
+
+				&:hover {
+					background-color : @blog-navbar-bg-hover;
+					color            : @blog-navbar-color-hover;
+				}
+			}
+
+			&.active {
+				a {
+					background-color : transparent;
+					color            : @blog-navbar-color-hover;
+					.box-shadow(@blog-navbar-active-box-shadow);
+				}
+			}
+		}
+	}
 }
 
 .masthead {
-	padding    : @masthead-padding;
-	text-align : center;
-	.box-shadow(@masthead-box-shadow);
+	padding : 60px 80px;
+}
+
+.main.container {
+	.border-radius(4px);
+
+	background-color : @body-bg;
+}
+
+.post {
+	background-color : @post-bg;
+	padding          : @post-padding;
+	margin-bottom: @post-margin;
 }

@@ -1,30 +1,92 @@
 // App properties
+@fonts-path : "../fonts";
+@images-path : "../images";
 
-// Common
-@default-header-border-opacity : 0.75;
-@default-header-border-color : rgba(255, 255, 255, @default-header-border-opacity);
-@default-header-border-width : 4px;
+// Header
+@blog-description-border : 1px solid @concrete;
+@blog-description-padding : 15px 0;
+@blog-navbar-margin-top : 50px;
+@blog-navbar-bg : @wet-asphalt;
+@blog-navbar-bg-hover : @midnight-blue;
+@blog-navbar-color : @concrete;
+@blog-navbar-color-hover : @white;
+@blog-navbar-active-box-shadow : 0 6px 0 @peter-river;
+@blog-navbar-border-radius : 4px;
 
-// Blog logo
-@blog-logo-border : (2 * @default-header-border-width) solid @navbar-default-bg;
-@blog-logo-box-shadow : 0 @default-header-border-width 0 @default-header-border-color;
-@blog-logo-margin-bottom : 40px;
-
-// Blog Padding
-@blog-header-background: @navbar-default-bg;
-@blog-header-padding : 20px 40px;
-@blog-header-border-radius : 10px;
-
-// Masthead
-@masthead-padding : (@blog-logo-margin-bottom + 20) @blog-logo-margin-bottom;
-@masthead-box-shadow : 0px -@default-header-border-width 0 @default-header-border-color inset;
-
-// Navbar
-@navbar-border-bottom : @default-header-border-width solid rgba(255, 255, 255, @default-header-border-opacity / 2);
+// Posts
+@post-bg : @white;
+@post-margin : 20px;
+@post-padding : 20px;
 
 // Override Bootstrap properties
-@navbar-default-bg : rgba(255, 255, 255, 0.6);
-@navbar-default-border: none;
-@navbar-border-radius : 0px;
 
+// Grays
+// -------------------------
 
+@gray-darker: darken(@gray-dark, 5%);
+@gray-dark: @asbestos;
+@gray: @concrete;
+@gray-light: @silver;
+@gray-lighter: @clouds;
+
+// Brand colors
+// -------------------------
+
+@brand-primary: @belize-hole;
+@brand-success: @green-sea;
+@brand-warning: @carrot;
+@brand-danger: @pomegranate;
+@brand-info: @peter-river;
+
+// Scaffolding
+// -------------------------
+
+@body-bg: @white;
+@text-color: @midnight-blue;
+
+// Global Colors
+@turquoise : #1ABC9C;
+@green-sea : #16A085;
+@emerald : #2ecc71;
+@nephritis : #27ae60;
+
+@peter-river : #3498db;
+@belize-hole : #2980b9;
+
+@amethyst : #9b59b6;
+@wisteria : #8e44ad;
+
+@sun-flower : #f1c40f;
+@orange : #f39c12;
+@carrot : #e67e22;
+@pumpkin : #d35400;
+@alizarin : #e74c3c;
+@pomegranate : #c0392b;
+
+@clouds : #ecf0f1;
+@silver : #bdc3c7;
+@concrete : #95a5a6;
+@asbestos : #7f8c8d;
+@midnight-blue : #566473;
+@wet-asphalt : #34495e;
+
+@white : #FFF;
+@gray-10 : #ebebeb;
+@gray-15 : #e1e1e1;
+@gray-20 : #d7d7d7;
+@gray-25 : #cccccc;
+@gray-30 : #c2c2c2;
+@gray-35 : #b7b7b7;
+@gray-40 : #acacac;
+@gray-45 : #a1a1a1;
+@gray-50 : #959595;
+@gray-55 : #898989;
+@gray-60 : #7d7d7d;
+@gray-65 : #707070;
+@gray-70 : #636363;
+@gray-75 : #555555;
+@gray-80 : #464646;
+@gray-85 : #363636;
+@gray-90 : #252525;
+@gray-95 : #111111;
+@black : #000;
