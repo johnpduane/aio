@@ -28,7 +28,6 @@
 
 body {
 	font-family     : "Open Sans";
-
 	background      : url('@{images-path}/body-bg.png') no-repeat center center fixed;
 	background-size : cover;
 }
@@ -50,8 +49,8 @@ body {
 }
 
 .blog-navbar {
-	margin-top : @blog-navbar-margin-top;
-	text-align : center;
+	margin-bottom : @blog-navbar-margin;
+	text-align    : center;
 
 	.nav {
 		display          : inline-block;
@@ -86,12 +85,11 @@ body {
 
 .main.container {
 	.border-radius(4px);
-
 	background-color : @body-bg;
 }
 
 .post {
 	background-color : @post-bg;
 	padding          : @post-padding;
-	margin-bottom: @post-margin;
+	margin-bottom    : @post-margin;
 }

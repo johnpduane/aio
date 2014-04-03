@@ -3,44 +3,35 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The big featured header on the homepage, with the site logo and description }}
+<nav class="blog-navbar" role="navigation">
+	<ul class="nav nav-pills ">
+		<li class="active"><a href="{{@blog.url}}">Home</a></li>
+		<li><a href="{{@blog.url}}/about">About</a></li>
+	</ul>
+</nav>
 
-<div class="container">
-	<header class="masthead">
-		<div class="blog-header">
-			<h1 class="blog-title">{{@blog.title}}</h1>
-			<h2 class="blog-description">{{@blog.description}}</h2>
-		</div>
+{{! The main content area on the homepage }}
+<main class="posts">
+	{{! Each post will be output using this markup }}
+	{{#foreach posts}}
 
-		<nav class="blog-navbar" role="navigation">
-			<ul class="nav nav-pills ">
-				<li class="active"><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+		<article class="{{post_class}}">
+			<header class="post-header">
+					<span class="post-meta">
+						<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}
+					</span>
 
-	{{! The main content area on the homepage }}
-	<main class="posts">
-		{{! Each post will be output using this markup }}
-		{{#foreach posts}}
+				<h2 class="post-title">
+					<a href="{{url}}">{{{title}}}</a>
+				</h2>
+			</header>
+			<section class="post-excerpt">
+				<p>{{excerpt}}&hellip;</p>
+			</section>
+		</article>
 
-			<article class="{{post_class}}">
-				<header class="post-header">
-					<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+	{{/foreach}}
 
-					<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-
-				</header>
-				<section class="post-excerpt">
-					<p>{{excerpt}}&hellip;</p>
-				</section>
-			</article>
-
-		{{/foreach}}
-
-		{{!! After all the posts, we have the previous/next pagination links }}
-		{{pagination}}
-	</main>
-</div>
+	{{!! After all the posts, we have the previous/next pagination links }}
+	{{pagination}}
+</main>

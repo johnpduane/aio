@@ -24,8 +24,20 @@
 </head>
 <body class="{{body_class}}" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat center center fixed; background-size: cover;"{{/if}}>
 
-{{! Everything else gets inserted here }}
-{{{body}}}
+{{! The big featured header on the homepage, with the site logo and description }}
+<div class="container">
+	<header class="masthead">
+		<div class="blog-header">
+			<h1 class="blog-title">
+				<a href="{{@blog.url}}">{{@blog.title}}</a>
+			</h1>
+			<h2 class="blog-description">{{@blog.description}}</h2>
+		</div>
+	</header>
+
+	{{! Everything else gets inserted here }}
+	{{{body}}}
+</div>
 
 <footer class="footer">
 	<div class="container">
