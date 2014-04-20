@@ -5,20 +5,66 @@
 // Header
 @blog-description-border : 1px solid @concrete;
 @blog-description-padding : 15px 0;
-@blog-navbar-margin : 50px;
+
+@blog-navbar-margin : 0px;
 @blog-navbar-bg : @wet-asphalt;
+@blog-navbar-bg-active : darken(@wet-asphalt, 10%);
 @blog-navbar-bg-hover : @midnight-blue;
 @blog-navbar-color : @concrete;
 @blog-navbar-color-hover : @white;
-@blog-navbar-active-box-shadow : 0 6px 0 @peter-river;
-@blog-navbar-border-radius : 4px;
+@blog-navbar-border-radius : 0px;
+@blog-navbar-box-shadow-active : 0 0 10px darken(@wet-asphalt, 20%) inset, 0 0 1px lighten(@wet-asphalt, 10%);
+
+// Navbar under layer
+@blog-navbar-under-layer-border : 1px solid lighten(@peter-river, 10%);
+@blog-navbar-under-layer-bg : @peter-river;
+@blog-navbar-under-layer-height : @navbar-height;
+@blog-navbar-under-layer-box-shadow : 0 -1px 1px darken(@peter-river, 5%) inset;
+
+// Blog title
+@blog-navbar-brand-line-height : 18px;
+@blog-title-margin-top : -60px;
+@blog-title-margin-bottom : 0;
+
+// Blog logo
+@blog-logo-size : 150px;
+@blog-logo-border : 10px solid rgba(255, 255, 255, 0.3);
+@blog-logo-box-shadow : 0 1px 0 lighten(@peter-river, 10%);
 
 // Posts
 @post-bg : @white;
-@post-margin : 20px;
-@post-padding : 20px;
+@post-padding: 20px;
+@post-margin : 30px;
+@post-bg-even : @clouds;
+@post-bg-odd : @white;
+@post-border-even : 1px solid @silver;
+@post-color-even : @midnight-blue;
+@post-color-odd : @midnight-blue;
+
+// Post meta
+@post-meta-time-bg: @wet-asphalt;
+@post-meta-time-color: @clouds;
+@post-meta-time-padding : 5px 10px;
+@post-meta-time-border-radius : 4px;
+
+// Posts header
+@post-header-color : @wet-asphalt;
+
+// Post title
+@post-title-color: @wet-asphalt;
+
+// Post excerpt
+@post-excerpt-color: @midnight-blue;
+@post-excerpt-border-left: 1px solid @asbestos;
+@post-excerpt-padding : 10px 20px;
+
+// Tags
+@tag-bg : @wet-asphalt;
+@tag-color : @concrete;
+@tag-color-hover : @white;
 
 // Override Bootstrap properties
+@navbar-height: 60px;
 
 // Grays
 // -------------------------

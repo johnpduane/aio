@@ -22,22 +22,47 @@
 	{{! Ghost outputs important style and meta data with this tag }}
 	{{ghost_head}}
 </head>
-<body class="{{body_class}}" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat center center fixed; background-size: cover;"{{/if}}>
+<body class="{{body_class}}">
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<div class="container">
-	<header class="masthead">
-		<div class="blog-header">
-			<h1 class="blog-title">
-				<a href="{{@blog.url}}">{{@blog.title}}</a>
-			</h1>
-			<h2 class="blog-description">{{@blog.description}}</h2>
-		</div>
-	</header>
 
-	{{! Everything else gets inserted here }}
+<header>
+	<nav class="blog-navbar navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<p class="navbar-text">{{@blog.description}}</p>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="{{@blog.url}}">Home</a></li>
+					<li><a href="{{@blog.url}}/about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="blog-navbar-under-layer"></div>
+
+	<div class="blog-title container">
+		<div class="blog-logo">
+			<img src="{{@blog.logo}}">
+		</div>
+	</div>
+</header>
+
+{{! Everything else gets inserted here }}
+<main class="main">
 	{{{body}}}
-</div>
+</main>
 
 <footer class="footer">
 	<div class="container">
