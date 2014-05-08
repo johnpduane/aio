@@ -95,7 +95,7 @@ module.exports = function (grunt) {
 				"livereload": true
 			},
 			"hbs"   : {
-				"files": ["app/templates/*.hbs"],
+				"files": ["app/templates*/**/*.hbs"],
 				"tasks": ["clean", "copy:templates", "rsync:watch"]
 			},
 			"css"    : {

@@ -1,0 +1,88 @@
+.post {
+  padding-top    : @post-padding;
+  padding-bottom : @post-padding;
+
+  &:nth-child(even) {
+    color            : @post-color-even;
+    background-color : @post-bg-even;
+    border-top       : @post-border-even;
+    border-bottom    : @post-border-even;
+  }
+
+  &:nth-child(odd) {
+    color            : @post-color-odd;
+    background-color : @post-bg-odd;
+  }
+}
+
+.post-container {
+  padding : @post-padding;
+
+  @media (min-width : @screen-lg-min) {
+    width           : @container-md;
+  }
+}
+
+.post-title {
+  a {
+    color : @post-title-color;
+  }
+}
+
+h1.post-title {
+  border-bottom  : @post-border-even;
+  padding-bottom : @post-padding;
+  margin-bottom  : @post-margin;
+}
+
+.post-meta {
+  display : block;
+}
+
+.post-header {
+  color : @post-header-color;
+}
+
+.post-excerpt {
+  color       : @post-excerpt-color;
+  padding     : @post-excerpt-padding;
+  border-left : @post-excerpt-border-left;
+
+  p {
+    margin-bottom : 0;
+  }
+}
+
+.post-excerpt,
+.post-content {
+  font-family : 'Droid Serif';
+}
+
+.post-footer {
+  background-color : @post-footer-bg;
+  padding          : @post-footer-padding;
+  color            : @post-footer-color;
+
+  .share {
+    .icon {
+      font-size : @post-share-font-size;
+
+      &:hover {
+        text-decoration : none;
+        color           : @clouds;
+      }
+    }
+  }
+}
+
+.author-description {
+  margin-top    : @author-description-margin-top;
+  margin-bottom : @author-description-margin-bottom;
+}
+
+.author-img {
+  img {
+    display : inline-block;
+    border  : @author-img-border;
+  }
+}

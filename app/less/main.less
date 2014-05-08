@@ -1,10 +1,12 @@
 @import "bootstrap";
+@import "ikons";
 @import "fonts";
+@import "post";
 @import "variables";
 @import "mixins";
 
 body {
-	font-family : "Open Sans";
+  font-family : "Open Sans";
 }
 
 h1,
@@ -13,158 +15,160 @@ h3,
 h4,
 h5,
 h6 {
-	font-family    : "Open Sans Bold";
-	text-transform : uppercase;
+  font-family    : "Open Sans Bold";
+  text-transform : uppercase;
 }
 
 a {
-	color : @blog-navbar-under-layer-bg;
+  color : @blog-navbar-under-layer-bg;
+}
+
+img {
+  .img-responsive();
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+p {
+  .hyphenate;
+}
+
+.btn {
+  text-transform : uppercase;
 }
 
 .blog-title {
-	text-align    : center;
-	margin-top    : @blog-title-margin-top;
-	margin-bottom : @blog-title-margin-bottom;
+  text-align    : center;
+  margin-top    : @blog-title-margin-top;
+  margin-bottom : @blog-title-margin-bottom;
 }
 
 .blog-logo {
-	width  : @blog-logo-size;
-	height : @blog-logo-size;
-	margin : 15px auto 0 auto;
+  width  : @blog-logo-size;
+  height : @blog-logo-size;
+  margin : 15px auto 0 auto;
 
-	img {
-		max-width  : 100%;
-		max-height : 100%;
-		border     : @blog-logo-border;
-		.border-radius(100%);
-	}
+  img {
+    border : @blog-logo-border;
+    .border-radius(100%);
+  }
 }
 
 .blog-navbar {
-	background-color : @blog-navbar-bg;
-	border           : none;
-	margin-bottom    : @blog-navbar-margin;
-	text-align       : center;
-	.border-radius(@blog-navbar-border-radius);
+  background-color : @blog-navbar-bg;
+  border           : none;
+  margin-bottom    : @blog-navbar-margin;
+  text-align       : center;
+  .border-radius(@blog-navbar-border-radius);
 
-	.navbar-brand {
-		line-height : @blog-navbar-brand-line-height;
-		color       : @white;
+  .navbar-brand {
+    line-height : @blog-navbar-brand-line-height;
+    color       : @white;
 
-		&:hover {
-			color : @white;
-		}
-	}
+    &:hover {
+      color : @white;
+    }
+  }
 
-	.nav {
-		display          : inline-block;
-		background-color : transparent;
+  .nav {
+    display          : inline-block;
+    background-color : transparent;
 
-		li {
-			a {
-				color            : @blog-navbar-color;
-				background-color : @blog-navbar-bg;
+    @media (max-width : @screen-xs-max) {
+      display         : block;
+    }
 
-				padding-left     : 30px;
-				padding-right    : 30px;
+    li {
+      a {
+        color            : @blog-navbar-color;
+        background-color : @blog-navbar-bg;
 
-				.transition(all .3s ease-in-out);
+        padding-left     : 30px;
+        padding-right    : 30px;
 
-				&:hover {
-					background-color : @blog-navbar-bg-hover;
-					color            : @blog-navbar-color-hover;
-				}
-			}
+        .transition(all .3s ease-in-out);
 
-			&.active {
-				a {
-					color            : @blog-navbar-color-hover;
-					background-color : @blog-navbar-bg-active;
-					.box-shadow(@blog-navbar-box-shadow-active);
+        &:hover {
+          color            : @blog-navbar-color-hover;
+          background-color : @blog-navbar-bg-active;
+          .box-shadow(@blog-navbar-box-shadow-active);
 
-					&:hover {
-						background-color : @blog-navbar-bg-active;
-					}
-				}
-			}
-		}
-	}
+          &:hover {
+            background-color : @blog-navbar-bg-active;
+          }
+        }
+      }
+    }
+  }
 }
 
 .blog-navbar-under-layer {
-	background-color : @blog-navbar-under-layer-bg;
-	border-top       : @blog-navbar-under-layer-border;
-	height           : @blog-navbar-under-layer-height;
-	.box-shadow(@blog-navbar-under-layer-box-shadow);
+  background-color : @blog-navbar-under-layer-bg;
+  border-top       : @blog-navbar-under-layer-border;
+  height           : @blog-navbar-under-layer-height;
+  .box-shadow(@blog-navbar-under-layer-box-shadow);
 }
 
 .blog-tags-navbar {
-	.tag {
-		color            : @tag-color;
-		background-color : @tag-bg;
-		border           : none;
+  .tag {
+    color            : @tag-color;
+    background-color : @tag-bg;
+    border           : none;
 
-		&:hover {
-			color : @tag-color-hover;
-		}
-	}
+    &:hover {
+      color : @tag-color-hover;
+    }
+  }
 }
 
-.post-container {
-	padding : @post-padding;
-
-	@media (min-width : @screen-lg-min) {
-		width         : @container-md;
-	}
+.black-label {
+  display          : inline-block;
+  color            : @post-meta-time-color;
+  background-color : @post-meta-time-bg;
+  padding          : @post-meta-time-padding;
+  font-size        : @post-meta-time-font-size;
+  border           : 1px solid @post-meta-time-bg;
+  .border-radius(@post-meta-time-border-radius);
 }
 
-.post {
-	padding-top    : @post-padding;
-	padding-bottom : @post-padding;
-
-	&:nth-child(even) {
-		color            : @post-color-even;
-		background-color : @post-bg-even;
-		border-top       : @post-border-even;
-		border-bottom    : @post-border-even;
-	}
-
-	&:nth-child(odd) {
-		color            : @post-color-odd;
-		background-color : @post-bg-odd;
-	}
+.pagination {
+  margin     : @pagination-margin;
+  display    : block;
+  text-align : center;
+  position   : relative;
 }
 
-.post-title {
-	a {
-		color : @post-title-color;
-	}
+.footer {
+  border-top       : @footer-border;
+  color            : @footer-color;
+  background-color : @footer-bg;
+  padding          : @footer-padding;
+  text-align       : center;
+  .box-shadow(@footer-box-shadow);
+
+  a {
+    color : @footer-link-color;
+
+    &:hover {
+      color : @footer-link-color-hover;
+    }
+  }
+
+  .inner {
+    margin-top : 20px;
+  }
+
+  .poweredby {
+    margin-top : 10px;
+  }
 }
 
-.post-meta {
-	time {
-		color            : @post-meta-time-color;
-		background-color : @post-meta-time-bg;
-		padding          : @post-meta-time-padding;
-		.border-radius(@post-meta-time-border-radius);
-	}
+.older-posts {
+  position : absolute;
+  right    : 0;
 }
 
-.post-header {
-	color : @post-header-color;
-}
-
-.post-excerpt {
-	color       : @post-excerpt-color;
-	padding     : @post-excerpt-padding;
-	border-left : @post-excerpt-border-left;
-
-	p {
-		margin-bottom : 0;
-	}
-}
-
-.post-excerpt,
-.post-content {
-	font-family : 'Droid Serif';
+.newer-posts {
+  position : absolute;
+  left     : 0;
 }
