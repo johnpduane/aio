@@ -1,88 +1,121 @@
 .post {
-  padding-top    : @post-padding;
-  padding-bottom : @post-padding;
+  padding-top: @post-padding;
+  padding-bottom: @post-padding;
 
   &:nth-child(even) {
-    color            : @post-color-even;
-    background-color : @post-bg-even;
-    border-top       : @post-border-even;
-    border-bottom    : @post-border-even;
+    color: @post-color-even;
+    background-color: @post-bg-even;
+    border-top: @post-border-even;
+    border-bottom: @post-border-even;
   }
 
   &:nth-child(odd) {
-    color            : @post-color-odd;
-    background-color : @post-bg-odd;
+    color: @post-color-odd;
+    background-color: @post-bg-odd;
   }
 }
 
 .post-container {
-  padding : @post-padding;
+  padding: @post-padding;
 
-  @media (min-width : @screen-lg-min) {
-    width           : @container-md;
+  @media (min-width: @screen-lg-min) {
+    width: @container-md;
   }
+}
+
+.post-date {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: @post-date-margin-right;
+}
+
+.post-comments {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-tags {
+  font-family: @open-sans;
+  text-transform: uppercase;
 }
 
 .post-title {
   a {
-    color : @post-title-color;
+    color: @post-title-color;
   }
 }
 
-h1.post-title {
-  border-bottom  : @post-border-even;
-  padding-bottom : @post-padding;
-  margin-bottom  : @post-margin;
+.post.full {
+  .post-meta {
+    border-bottom: @post-border-even;
+    padding-bottom: @post-padding;
+    margin-bottom: @post-margin;
+  }
+}
+
+h2.post-title {
+  margin-top: @post-title-margin-top;
+  margin-bottom: @post-title-margin-bottom;
 }
 
 .post-meta {
-  display : block;
+  display: block;
 }
 
 .post-header {
-  color : @post-header-color;
+  color: @post-header-color;
+  margin-bottom: @post-header-margin-bottom;
 }
 
 .post-excerpt {
-  color       : @post-excerpt-color;
-  padding     : @post-excerpt-padding;
-  border-left : @post-excerpt-border-left;
+  color: @post-excerpt-color;
+  padding: @post-excerpt-padding;
+  border-left: @post-excerpt-border-left;
 
   p {
-    margin-bottom : 0;
+    margin-bottom: 0;
   }
 }
 
 .post-excerpt,
 .post-content {
-  font-family : 'Droid Serif';
+  font-family: @droid;
 }
 
 .post-footer {
-  background-color : @post-footer-bg;
-  padding          : @post-footer-padding;
-  color            : @post-footer-color;
+  background-color: @post-footer-bg;
+  padding: @post-footer-padding;
+  color: @post-footer-color;
+  text-align: center;
 
   .share {
+    text-align: left;
+
     .icon {
-      font-size : @post-share-font-size;
+      font-size: @post-share-font-size;
 
       &:hover {
-        text-decoration : none;
-        color           : @clouds;
+        text-decoration: none;
+        color: @clouds;
       }
     }
   }
 }
 
+.post-footer-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .author-description {
-  margin-top    : @author-description-margin-top;
-  margin-bottom : @author-description-margin-bottom;
+  text-align: left;
 }
 
 .author-img {
-  img {
-    display : inline-block;
-    border  : @author-img-border;
+  border: @author-img-border;
+  margin-right: @author-img-margin-right;
+
+  @media (max-width: @screen-xs-max) {
+    margin-right: @author-img-margin-right / 4;
   }
 }

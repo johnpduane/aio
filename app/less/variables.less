@@ -2,6 +2,14 @@
 @fonts-path : "../fonts";
 @images-path : "../images";
 
+// font families
+@open-sans: "OpenSans";
+@open-sans-light: "OpenSans-Light";
+@open-sans-bold: "OpenSans-Bold";
+@droid: "DroidSerif";
+@droid-light: "DroidSerif-Light";
+@droid-bold: "DroidSerif-Bold";
+
 // Header
 @blog-description-border : 1px solid @concrete;
 @blog-description-padding : 15px 0;
@@ -29,30 +37,34 @@
 // Blog logo
 @blog-logo-size : 150px;
 @blog-logo-border : 10px solid rgba(255, 255, 255, 0.3);
-@blog-logo-box-shadow : 0 1px 0 lighten(@peter-river, 10%);
+@blog-logo-box-shadow : 0 1px 1px 1px rgba(0, 0, 0, 0.1);
 
 // Posts
 @post-bg : @white;
 @post-padding: 20px;
 @post-margin : 20px;
-@post-bg-even : @clouds;
+@post-bg-even : @gray-5;
 @post-bg-odd : @white;
-@post-border-even : 1px solid @silver;
+@post-border-even : 1px solid @clouds;
 @post-color-even : @midnight-blue;
 @post-color-odd : @midnight-blue;
 
+// Post date
+@post-date-margin-right : 10px;
+
 // Post meta
-@post-meta-time-bg: @wet-asphalt;
-@post-meta-time-color: @clouds;
-@post-meta-time-padding : 6px 12px;
+@post-meta-time-color: @wet-asphalt;
 @post-meta-time-font-size : 14px;
-@post-meta-time-border-radius : 4px;
+@post-meta-time-font-weight : bold;
 
 // Posts header
-@post-header-color : @wet-asphalt;
+@post-header-color: @wet-asphalt;
+@post-header-margin-bottom: 20px;
 
 // Post title
 @post-title-color: @wet-asphalt;
+@post-title-margin-top: 10px;
+@post-title-margin-bottom: 10px;
 
 // Post excerpt
 @post-excerpt-color: @midnight-blue;
@@ -66,9 +78,8 @@
 @post-footer-height : 220px;
 
 // Post author
-@author-description-margin-top   : 30px;
-@author-description-margin-bottom : 30px;
 @author-img-border : 10px solid @midnight-blue;
+@author-img-margin-right: 40px;
 
 // Post share
 @post-share-font-size : 36px;
@@ -105,11 +116,11 @@
 // Brand colors
 // -------------------------
 
-@brand-primary: @belize-hole;
+@brand-primary: @wet-asphalt;
 @brand-success: @green-sea;
 @brand-warning: @carrot;
 @brand-danger: @pomegranate;
-@brand-info: @peter-river;
+@brand-info: @belize-hole;
 
 // Scaffolding
 // -------------------------
@@ -118,8 +129,8 @@
 @text-color: @midnight-blue;
 
 // Global Colors
-@turquoise : #1ABC9C;
-@green-sea : #16A085;
+@turquoise : #1abc9c;
+@green-sea : #16a085;
 @emerald : #2ecc71;
 @nephritis : #27ae60;
 
@@ -143,7 +154,8 @@
 @midnight-blue : #566473;
 @wet-asphalt : #34495e;
 
-@white : #FFF;
+@white : #fff;
+@gray-5 : #f9f9f9;
 @gray-10 : #ebebeb;
 @gray-15 : #e1e1e1;
 @gray-20 : #d7d7d7;

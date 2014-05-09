@@ -6,18 +6,22 @@
     <article class="{{post_class}}">
       <div class="container post-container">
         <header class="post-header">
-
-          <span class="post-meta">
-						<time class="black-label" datetime="{{date format='YYYY-MM-DD'}}">
-              {{date format="DD MMM YYYY"}}
-            </time>
-            {{tags prefix="on "}}
-					</span>
+          <div class="post-tags">
+            {{tags}}
+          </div>
 
           <h2 class="post-title">
-            <a href="{{url}}">{{{title}}}</a>
+            <a href="{{@blog.url}}{{url}}">{{{title}}}</a>
           </h2>
+
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+            <i class="icon-time"></i>
+            {{date format="DD MMM YYYY"}}
+          </time>
+
+          <a class="post-comments label label-info" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
         </header>
+
         <section class="post-excerpt">
           <p>{{excerpt}}&hellip;</p>
         </section>

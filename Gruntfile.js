@@ -33,7 +33,8 @@ module.exports = function (grunt) {
       "lib": {
         "src": [
           "bower_components/jquery/dist/jquery.min.js",
-          "bower_components/bootstrap/dist/js/bootstrap.min.js"
+          "bower_components/bootstrap/dist/js/bootstrap.min.js",
+          "app/js/prism.js"
         ],
         "dest": assetsPath + "/js/<%= pkg.name %>-lib.min.js"
       }
@@ -45,21 +46,9 @@ module.exports = function (grunt) {
         "src": ["**/*.hbs"],
         "dest": buildPath + "/"
       },
-      "images": {
-        "expand": true,
-        "cwd": "app/images",
-        "src": ["**/*.{png,jpeg,jpg}"],
-        "dest": assetsPath + "/images"
-      },
       "fonts": {
         "expand": true,
         "cwd": "app/fonts",
-        "src": "**/*",
-        "dest": assetsPath + "/fonts"
-      },
-      "fontawesome": {
-        "expand": true,
-        "cwd": "bower_components/fontawesome/fonts",
         "src": "**/*",
         "dest": assetsPath + "/fonts"
       },
@@ -99,15 +88,15 @@ module.exports = function (grunt) {
       },
       "hbs": {
         "files": ["app/templates*/**/*.hbs"],
-        "tasks": ["clean", "copy:templates", "patternReplace", "rsync:watch"]
+        "tasks": ["copy:templates", "patternReplace", "rsync:watch"]
       },
       "css": {
         "files": ["app/less/**/*.less"],
-        "tasks": ["clean", "less", "rsync:watch"]
+        "tasks": ["less", "rsync:watch"]
       },
       "js": {
         "files": ["app/js/**/*.js"],
-        "tasks": ["clean", "concat", "rsync:watch"]
+        "tasks": ["concat", "rsync:watch"]
       }
     },
     "patternReplace": {
