@@ -1,7 +1,7 @@
 {
-	"host" : "nimaen@localhost",
-	"dest" : "~/Documents/www/ghost-0.4.2/content/themes/aio",
-  "disqus" : {
-    "identifier" : "nimaen"
+  "host": "nimaen@localhost",
+  "dest": "~/Documents/www/ghost-0.4.2/content/themes/aio",
+  "disqus": {
+    "identifier": "nimaen"
   }
 }
