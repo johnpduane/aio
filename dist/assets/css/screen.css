@@ -268,7 +268,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #566473;
+  color: #363636;
   background-color: #ffffff;
 }
 input,
@@ -1685,7 +1685,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #97a4b1;
+  color: #767676;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2883,7 +2883,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #566473;
+  color: #363636;
 }
 .media,
 .media-body {
@@ -4178,13 +4178,11 @@ pre.line-numbers > code {
   padding-bottom: 20px;
 }
 .post:nth-child(even) {
-  color: #566473;
   background-color: #f9f9f9;
   border-top: 1px solid #ecf0f1;
   border-bottom: 1px solid #ecf0f1;
 }
 .post:nth-child(odd) {
-  color: #566473;
   background-color: #ffffff;
 }
 .post-container {
@@ -4306,8 +4304,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+  font-family: "OpenSans-Bold", "OpenSans Bold", "Open Sans Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
   text-transform: uppercase;
+}
+dt {
+  font-family: "OpenSans-Bold", "OpenSans Bold", "Open Sans Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
 }
 a {
   color: #3498db;
