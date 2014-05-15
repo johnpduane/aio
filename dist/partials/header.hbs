@@ -1,32 +1,32 @@
 <header>
-  <nav class="blog-navbar navbar navbar-inverse" role="navigation">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
-      </div>
+	<nav class="blog-navbar navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
+			</div>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <p class="navbar-text">{{@blog.description}}</p>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{@blog.url}}">Home</a></li>
-          <li><a href="{{@blog.url}}/about">About</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<p class="navbar-text">{{@blog.description}}</p>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{{@blog.url}}">Home</a></li>
+					<li><a href="{{@blog.url}}/about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-  <div class="blog-navbar-under-layer"></div>
+	<div class="blog-navbar-under-layer"></div>
 
-  <div class="blog-title container">
-    <div class="blog-logo">
-      <img src="{{@blog.logo}}">
-    </div>
-  </div>
+	<div class="blog-title container">
+		<div class="blog-logo">
+			<img src="{{@blog.logo}}">
+		</div>
+	</div>
 </header>

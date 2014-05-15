@@ -4156,37 +4156,19 @@ pre.line-numbers > code {
   text-align: right;
 }
 @font-face {
-  font-family: "DroidSerif";
-  src: url('../fonts/droid-serif/DroidSerif.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "DroidSerif-Light";
-  src: url('../fonts/droid-serif/DroidSerif-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "DroidSerif-Bold";
-  src: url('../fonts/droid-serif/DroidSerif-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
+  font-family: "OpenSans", "Open Sans", "Helvetica Neue", Helvetica;
   src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "OpenSans-Bold";
+  font-family: "OpenSans-Bold", "OpenSans Bold", "Open Sans Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
   src: url('../fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "OpenSans-Light";
+  font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
   src: url('../fonts/open-sans/OpenSans-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
@@ -4223,7 +4205,7 @@ pre.line-numbers > code {
   vertical-align: middle;
 }
 .post-tags {
-  font-family: "OpenSans";
+  font-family: "OpenSans", "Open Sans", "Helvetica Neue", Helvetica;
   text-transform: uppercase;
 }
 .post-title a {
@@ -4255,7 +4237,7 @@ h2.post-title {
 }
 .post-excerpt,
 .post-content {
-  font-family: "DroidSerif";
+  font-family: "OpenSans", "Open Sans", "Helvetica Neue", Helvetica;
 }
 .post-footer {
   background-color: #34495e;
@@ -4265,6 +4247,11 @@ h2.post-title {
 }
 .post-footer .share {
   text-align: left;
+}
+@media (max-width: 767px) {
+  .post-footer .share {
+    text-align: center;
+  }
 }
 .post-footer .share .icon {
   font-size: 36px;
@@ -4277,8 +4264,19 @@ h2.post-title {
   display: inline-block;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  .post-footer-item {
+    display: block;
+    text-align: center;
+  }
+}
 .author-description {
   text-align: left;
+}
+@media (max-width: 767px) {
+  .author-description {
+    text-align: center;
+  }
 }
 .author-img {
   border: 10px solid #566473;
@@ -4286,7 +4284,9 @@ h2.post-title {
 }
 @media (max-width: 767px) {
   .author-img {
-    margin-right: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .hyphenate {
@@ -4298,7 +4298,7 @@ h2.post-title {
   hyphens: auto;
 }
 body {
-  font-family: "OpenSans";
+  font-family: "OpenSans", "Open Sans", "Helvetica Neue", Helvetica;
 }
 h1,
 h2,
@@ -4306,7 +4306,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "OpenSans-Light";
+  font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
   text-transform: uppercase;
 }
 a {
@@ -4328,7 +4328,7 @@ p {
   hyphens: auto;
 }
 .btn {
-  font-family: "OpenSans-Light";
+  font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
   text-transform: uppercase;
 }
 .blog-title {
