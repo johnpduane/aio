@@ -1,5 +1,13 @@
 ## RELEASE NOTES
 
+### Version 1.1.2 - May 15, 2014
+
+* Change dt to open sans bold.
+* Change default text color.
+* Bugfix on assets path.
+
+---
+
 ### Version 1.1.1 - May 15, 2014
 
 * Improve readability.

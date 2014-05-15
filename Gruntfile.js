@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+	var _ = require("lodash");
 
 	var buildPath = "./dist";
 	var assetsPath = buildPath + "/assets";
@@ -17,7 +18,7 @@ module.exports = function (grunt) {
 					"compress": false
 				},
 				"src": "app/less/main.less",
-				"dest": assetsPath + "/css/screen.css"
+				"dest": assetsPath + "/css/<%= pkg.name %>.css"
 			},
 			"min": {
 				"options": {
@@ -26,7 +27,7 @@ module.exports = function (grunt) {
 					"compress": true
 				},
 				"src": "<%= less.default.dest %>",
-				"dest": assetsPath + "/css/screen.min.css"
+				"dest": assetsPath + "/css/<%= pkg.name %>.min.css"
 			}
 		},
 		"concat": {
@@ -116,7 +117,7 @@ module.exports = function (grunt) {
 		"patternReplace": {
 			"default": {
 				"options": {
-					"tokens": localConfig
+					"tokens": _.merge(localConfig, pkg)
 				},
 				"files": [
 					{
