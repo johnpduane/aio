@@ -2,6 +2,14 @@
 
 ### Version 1.1.2 - May 15, 2014
 
+* Remove Ikons.
+* Add FontAwesome.
+* Add social icons in the header.
+
+---
+
+### Version 1.1.2 - May 15, 2014
+
 * Change dt to open sans bold.
 * Change default text color.
 * Bugfix on assets path.
