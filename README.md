@@ -1,8 +1,8 @@
-aio
+Aio
 ===
 
 [Bootstrap](http://getbootstrap.com/) - responsive - based theme for Ghost.
 
-- ["Ikons" font by Piotr Kwiatkowski](http://ikons.piotrkwiatkowski.co.uk/).
+- [FontAwesome Icons](http://fortawesome.github.io/Font-Awesome/).
 - [Prism Syntax highlighting](http://prismjs.com/).
 - [Disqus](http://disqus.com/) integration.
