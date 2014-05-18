@@ -1,5 +1,5 @@
 @import "bootstrap";
-@import "ikons";
+@import "/bower_components/fontawesome/less/font-awesome";
 @import "prism";
 @import "fonts";
 @import "post";
@@ -90,8 +90,8 @@ p {
 				color: @blog-navbar-color;
 				background-color: @blog-navbar-bg;
 
-				padding-left: 30px;
-				padding-right: 30px;
+				padding-left: @blog-navbar-icon-size + 4px;
+				padding-right: @blog-navbar-icon-size + 4px;
 
 				.transition(all .3s ease-in-out);
 
@@ -105,6 +105,10 @@ p {
 					}
 				}
 			}
+		}
+
+		.fa {
+			font-size: @blog-navbar-icon-size;
 		}
 	}
 }

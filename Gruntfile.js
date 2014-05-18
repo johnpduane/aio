@@ -48,10 +48,20 @@ module.exports = function (grunt) {
 				"dest": buildPath + "/"
 			},
 			"fonts": {
-				"expand": true,
-				"cwd": "app/fonts",
-				"src": "**/*",
-				"dest": assetsPath + "/fonts"
+				"files" : [
+					{
+						"expand": true,
+						"cwd": "app/fonts",
+						"src": "**/*",
+						"dest": assetsPath + "/fonts"
+					},
+					{
+						"expand": true,
+						"cwd": "bower_components/fontawesome/fonts",
+						"src": "**/*",
+						"dest": assetsPath + "/fonts"
+					},
+				]
 			},
 			"package": {
 				"src": "package.json",

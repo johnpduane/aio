@@ -15,8 +15,39 @@
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<p class="navbar-text">{{@blog.description}}</p>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="{{@blog.url}}">Home</a></li>
-					<li><a href="{{@blog.url}}/about">About</a></li>
+					<li>
+						<a href="{{@blog.url}}">
+							<i class="fa fa-home"></i>
+						</a>
+					</li>
+					<li>
+						<a href="[[social.twitter]]" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="[[social.linkedIn]]" target="_blank">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="[[social.googlePlus]]" target="_blank">
+							<i class="fa fa-google-plus"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="[[social.github]]" target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="{{@blog.url}}/about">
+							<i class="fa fa-user"></i>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>

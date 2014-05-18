@@ -3,5 +3,11 @@
 	"dest": "~/Documents/www/ghost-0.4.2/content/themes/aio",
 	"disqus": {
 		"identifier": "nimaen"
+	},
+	"social" : {
+		"twitter" : "https://twitter.com/Arnaud_Bosc",
+		"linkedIn" : "https://www.linkedin.com/profile/view?id=133869741&trk=spm_pic",
+		"googlePlus" : "https://plus.google.com/u/0/+ArnaudBosc/",
+		"github" : "https://github.com/Nimaen"
 	}
 }
