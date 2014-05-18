@@ -1,5 +1,13 @@
 ## RELEASE NOTES
 
+### Version 1.2.0 - May 18, 2014
+
+* Remove Ikons.
+* Add FontAwesome.
+* Add social icons in the header.
+
+---
+
 ### Version 1.1.2 - May 15, 2014
 
 * Change dt to open sans bold.
