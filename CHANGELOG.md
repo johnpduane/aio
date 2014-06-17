@@ -1,5 +1,14 @@
 ## RELEASE NOTES
 
+### Version 1.2.1 - Jun 17, 2014
+
+* Remove localConfig self reference.
+* Update Changelog file to add proper explanation on how to configurate your social profiles.
+* Add __time-grunt__ and __jit-grunt__ to the grunt file.
+* Properly handle nested __em__ and __strong__.
+
+---
+
 ### Version 1.2.0 - May 18, 2014
 
 * Remove Ikons.

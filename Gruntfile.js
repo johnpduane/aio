@@ -1,4 +1,9 @@
 module.exports = function (grunt) {
+	require('time-grunt')(grunt);
+	require('jit-grunt')(grunt, {
+		bower: "grunt-bower-task"
+	});
+
 	var _ = require("lodash");
 
 	var buildPath = "./dist";
@@ -142,15 +147,6 @@ module.exports = function (grunt) {
 	});
 
 	// Register tasks
-	grunt.loadNpmTasks("grunt-rsync");
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks("grunt-contrib-clean");
-	grunt.loadNpmTasks("grunt-contrib-copy");
-	grunt.loadNpmTasks("grunt-pattern-replace");
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compress');
-
 	grunt.registerTask("build", ["clean", "less", "concat", "copy", "patternReplace"]);
 
 	grunt.registerTask("default", ["build"]);

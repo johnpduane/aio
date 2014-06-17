@@ -4582,10 +4582,22 @@ pre.line-numbers > code {
   font-style: normal;
 }
 @font-face {
+  font-family: "OpenSans-Italic", "OpenSans Italic", "OpenSans Italic", "Helvetica Neue", Helvetica;
+  src: url('../fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
   font-family: "OpenSans-Bold", "OpenSans Bold", "Open Sans Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
   src: url('../fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-BoldItalic", "OpenSans BoldItalic", 'Open Sans BoldItalic', "Open Sans Bold Italic", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
+  src: url('../fonts/open-sans/OpenSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
 @font-face {
   font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
@@ -4719,6 +4731,18 @@ h2.post-title {
 body {
   font-family: "OpenSans", "Open Sans", "Helvetica Neue", Helvetica;
 }
+em {
+  font-family: "OpenSans-Italic", "OpenSans Italic", "OpenSans Italic", "Helvetica Neue", Helvetica;
+}
+em strong {
+  font-family: "OpenSans-BoldItalic", "OpenSans BoldItalic", 'Open Sans BoldItalic', "Open Sans Bold Italic", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
+}
+strong {
+  font-family: "OpenSans-Bold", "OpenSans Bold", "Open Sans Bold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
+}
+strong em {
+  font-family: "OpenSans-BoldItalic", "OpenSans BoldItalic", 'Open Sans BoldItalic', "Open Sans Bold Italic", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica;
+}
 h1,
 h2,
 h3,
@@ -4748,6 +4772,14 @@ p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+}
+.lead {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 18px;
+  }
 }
 .btn {
   font-family: "OpenSans-Light", "OpenSans Light", "Open Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;

@@ -10,6 +10,22 @@ body {
 	font-family: @open-sans;
 }
 
+em {
+	font-family: @open-sans-italic;
+
+	strong {
+		font-family: @open-sans-bold-italic;
+	}
+}
+
+strong {
+	font-family: @open-sans-bold;
+
+	em {
+		font-family: @open-sans-bold-italic;
+	}
+}
+
 h1,
 h2,
 h3,
@@ -36,6 +52,14 @@ img {
 
 p {
 	.hyphenate;
+}
+
+.lead {
+	font-size: floor((@font-size-base * 1.15));
+
+	@media (min-width: @screen-sm-min) {
+		font-size: floor((@font-size-base * 1.15));
+	}
 }
 
 .btn {
