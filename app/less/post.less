@@ -24,7 +24,10 @@
 .post-date {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: @post-date-margin-right;
+	margin-left: 8px;
+	padding-left: 12px;
+	border-left: #d5dbde 1px solid;
+	text-transform: uppercase;
 }
 
 .post-comments {
@@ -34,7 +37,7 @@
 
 .post-tags {
 	font-family: @open-sans;
-	text-transform: uppercase;
+	vertical-align: middle;
 }
 
 .post-title {
@@ -60,6 +63,15 @@ h2.post-title {
 	display: block;
 }
 
+.post-index-meta {
+	font-size: small;
+	padding: 0 20px;
+}
+
+.post-index-meta .post-tags {
+	vertical-align: top;
+}
+
 .post-header {
 	color: @post-header-color;
 	margin-bottom: @post-header-margin-bottom;
@@ -83,6 +95,7 @@ h2.post-title {
 .post-footer {
 	background-color: @post-footer-bg;
 	padding: @post-footer-padding;
+	margin-top: 20px;
 	color: @post-footer-color;
 	text-align: center;
 
@@ -125,6 +138,7 @@ h2.post-title {
 .author-img {
 	border: @author-img-border;
 	margin-right: @author-img-margin-right;
+	max-width: 150px;
 
 	@media (max-width: @screen-xs-max) {
 		.center-block();

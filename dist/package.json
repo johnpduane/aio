@@ -1,16 +1,12 @@
 {
-  "name": "Aio",
-  "version": "1.2.1",
-  "description": "A Bootstrap UI based theme for Ghost",
+  "name": "Aio-JD",
+  "version": "1.0.0",
+  "description": "A variation of the Aio theme for Ghost, see https://github.com/Nimaen/aio for original.",
   "repository": {
     "type": "git",
-    "url": "https://nimaen@github.com/Nimaen/aio.git"
+    "url": "https://github.com/johnpduane/aio.git"
   },
-  "author": "bosc.arno@gmail.com",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Nimaen/aio/issues"
-  },
   "homepage": "https://github.com/Nimaen/aio",
   "devDependencies": {
     "grunt": "^0.4.4",

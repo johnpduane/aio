@@ -1,34 +1,36 @@
 {{!< default}}
 
 <main class="posts">
-	{{#foreach posts}}
+    {{#foreach posts}}
 
-		<article class="{{post_class}}">
-			<div class="container post-container">
-				<header class="post-header">
-					<div class="post-tags">
-						{{tags}}
-					</div>
+        <article class="{{post_class}}">
+            <div class="container post-container">
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="{{@blog.url}}{{url}}">{{{title}}}</a>
+                    </h2>
 
-					<h2 class="post-title">
-						<a href="{{@blog.url}}{{url}}">{{{title}}}</a>
-					</h2>
+                </header>
 
-					<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
-						<i class="icon-time"></i>
-						{{date format="DD MMM YYYY"}}
-					</time>
+                <section class="post-excerpt">
+                    <p>{{excerpt}}&hellip;</p>
+                </section>
 
-					<a class="post-comments label label-info" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
-				</header>
 
-				<section class="post-excerpt">
-					<p>{{excerpt}}&hellip;</p>
-				</section>
-			</div>
-		</article>
+                <footer class="post-index-meta">
+                    <span class="post-tags">
+                        {{tags prefix="Tags: "}}
+                    </span>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                        <i class="icon-time"></i>
+                        {{date format="DD MMM YYYY"}}
+                    </time>
+                    <a class="post-comments label label-info" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
+                </footer>
+            </div>
+        </article>
 
-	{{/foreach}}
+    {{/foreach}}
 
-	{{pagination}}
+    {{pagination}}
 </main>
